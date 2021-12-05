@@ -1,0 +1,432 @@
+/* CSS Variables */
+:root {
+    --white:#fff;
+    --grey:#f2f2f2;
+    --aqua:#7da2a9;
+    --black:#18181e;
+    --dark:#333;
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--black);
+}
+
+body{
+    background: var(--white);
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    background: var(--aqua);
+    color: var(--white);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+
+.wrapper{
+    display: grid;
+}
+
+/* Header */
+
+header {
+    min-height: 600px;
+    background: url(/media/star.jpg);
+    background-size:cover;
+    background-position: center;
+    padding: 60px 120px;
+}
+
+header h1{
+    font-size: 4rem;
+    color: var(--white);
+}
+
+header h3{
+    font-size: 10rem;
+    color: var(--white);
+}
+
+/* About */
+
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background:var(--aqua);
+    min-height: 400px;
+}
+
+.about-left{
+    text-align: right;  
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content:center;
+    text-transform: uppercase;
+}
+
+.about-right{
+    text-align:left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content:center;
+    padding: 0px 80px;
+}
+
+.about-left h2{
+    color: var(--white);
+    font-size: 1.6rem;
+}
+
+.about-left h3{
+    color: var(--black);
+    font-size: 1.2rem;
+}
+
+.about-right p{
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+/* Program */
+
+.program{
+    display: grid;
+    grid-gap: 80px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 6rem;
+}
+
+.program-info{
+    text-align: center;
+    padding: 8rem 16rem;
+}
+
+.program-info h2{
+    text-transform: uppercase;
+}
+
+
+.box h3{
+    font-size: 1.3em;
+    text-transform: uppercase;
+}
+
+/* Feedback */
+
+.feedback{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    background: var(--black);
+}
+
+.showcase{
+    padding: 70px 20px;
+    text-align: right;
+}
+
+.showcase-info{
+    padding-right: 200px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.showcase-info h2{
+    color:var(--white);
+    font-size: 1.8rem;
+}
+
+.showcase-info p{
+    color: var(--white);
+    font-size: 1.1rem;
+}
+
+/* Gallery */
+
+.gallery-info{
+    text-align: center;
+    padding: 8rem 16rem;
+}
+
+.gallery{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+    padding: 20px 20px;
+}
+
+.gallery img {
+    width: 100%;
+    box-shadow: var(--shadow);
+  }
+
+  .counter{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-gap:100px;
+      background: var(--aqua);
+      text-align: center;
+      min-height: 260px;
+  }
+
+  .counter-box{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .counter h2{
+      color: var(--white);
+  }
+
+  .counter p{
+      color: var(--white);
+      text-transform: uppercase;
+      font-size: 1.2rem;
+  }
+
+  footer {
+    background: var(--dark);
+    text-align: center;
+    padding: 1rem;
+  }
+
+  footer p{
+    color: var(--white);
+  }
+
+
+  /* Media Queries */
+@media (max-width: 900px) {
+    
+    header {
+        padding: 30px 80px;
+    }
+
+    header h1{
+        font-size: 3rem;
+    }
+    
+    header h3{
+        font-size: 7rem;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about-left{  
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    }
+
+    .about-right{
+        display: flex;
+        text-align: center;
+        align-items: start;
+        justify-content: center;
+        padding: 0px 200px;
+    }
+
+    .program{
+        padding: 2rem 4rem;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+    }
+    
+    
+    .program-info h2{
+        text-transform: uppercase;
+    }
+    
+    
+    .box h3{
+        font-size: 1.3em;
+        text-transform: uppercase;
+    }
+
+    
+    .gallery{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
+    }
+
+
+    .counter{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding: 100px 20px;
+    }
+
+}
+  
+  @media (max-width: 700px) {
+   
+    header {
+        min-height: 400px;
+        background: url(/media/star.jpg);
+        background-size: cover;
+        background-position: center;
+        padding: 60px 120px;
+    }
+    
+    header h1{
+        font-size: 2rem;
+        color: var(--white);
+    }
+    
+    header h3{
+        font-size: 6rem;
+        color: var(--white);
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about-left{  
+        padding: 0 200px;
+
+    }
+
+    .about-right{
+        padding: 0 160px;
+    
+    }
+
+    .about-left h2{
+        font-size: 1.4rem;
+    }
+    
+    .about-left h3{
+        font-size: 1.2rem;
+    }
+    
+    .about-right p{
+        font-size: 1.1rem;
+    }
+
+    .program{
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .program-info{
+        text-align: center;
+    }
+        
+    .box p{
+        padding: 0 140px;
+    }
+    
+    .feedback{
+        grid-template-columns: 1fr;
+    }
+
+    .showcase{
+        text-align: center;
+        padding: 0;
+    }
+       
+    .showcase-info{
+        padding: 0;
+    }
+
+    .gallery-info{
+    padding: 2rem 6rem;
+    }
+    
+    .gallery{
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        padding: 20px 80px;
+    }
+    
+    .counter{
+        grid-template-columns: 1fr;
+        padding: 100px 20px;
+    }
+  }
+
+
+  @media (max-width: 500px) {
+   
+    header {
+        min-height: 300px;
+        padding: 60px 120px;
+    }
+    
+    header h1{
+        font-size: 1.6rem;
+    }
+    
+    header h3{
+        font-size: 4rem;
+    }
+
+    .about{
+        grid-template-columns: 1fr;
+    }
+
+    .about-left{  
+        padding: 0 160px;
+
+    }
+
+    .about-right{
+        padding: 0 120px;
+    
+    }
+
+    .about-left h2{
+        font-size: 1.4rem;
+    }
+    
+    .about-left h3{
+        font-size: 1.2rem;
+    }
+    
+    .about-right p{
+        font-size: 1.1rem;
+    }
+    
+    .program-info{
+        text-align: center;
+        padding: 10px 140px;
+    }
+        
+    .box p{
+        padding: 0 60px;
+    }
+    
+    .feedback{
+        grid-template-columns: 1fr;
+    }
+    
+    .showcase{
+        padding: 20px 120px;
+    }
+        
+    .gallery{
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+    
+  }
