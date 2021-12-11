@@ -45,16 +45,18 @@ header {
     background: url(../media/star.jpg);
     background-size:cover;
     background-position: center;
-    padding: 60px 120px;
 }
-
-header h1{
-    font-size: 4rem;
+.text{
+    padding-left: 60px;
+    padding-top:30px;
+}
+.text h1{
+    font-size: 3rem;
     color: var(--white);
 }
 
-header h3{
-    font-size: 10rem;
+.text h3{
+    font-size: 8rem;
     color: var(--white);
 }
 
@@ -106,7 +108,7 @@ header h3{
     display: grid;
     grid-gap: 80px;
     grid-template-columns: 1fr 1fr 1fr;
-    padding: 2rem 6rem;
+    padding: 2rem 4rem;
 }
 
 .program-info{
@@ -128,23 +130,23 @@ header h3{
 
 .feedback{
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
     background: var(--black);
+    min-height: 400px;
 }
 
 .showcase{
-    padding: 70px 20px;
+    padding: 2rem 0;
     text-align: right;
 }
 
 .showcase-info{
-    padding-right: 200px;
-    text-align: left;
     display: flex;
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    padding: 0 2rem;
 }
 
 .showcase-info h2{
@@ -165,10 +167,10 @@ header h3{
 }
 
 .gallery{
+    padding: 2rem;
     display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
-    padding: 20px 20px;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
 
 .gallery img {
@@ -179,7 +181,7 @@ header h3{
   .counter{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-gap:100px;
+      grid-gap:80px;
       background: var(--aqua);
       text-align: center;
       min-height: 260px;
@@ -199,7 +201,7 @@ header h3{
   .counter p{
       color: var(--white);
       text-transform: uppercase;
-      font-size: 1.2rem;
+      font-size: 1rem;
   }
 
   footer {
@@ -214,219 +216,92 @@ header h3{
 
 
   /* Media Queries */
-@media (max-width: 900px) {
-    
-    header {
-        padding: 30px 80px;
+
+@media (max-width: 992px) {
+
+    .feedback{
+        grid-template-columns: 1fr;
+        padding: 2rem 0;
     }
 
-    header h1{
+    .showcase{
+        text-align: center;
+    }
+    
+  }
+
+@media (max-width: 768px) {
+
+    .text h1{
         font-size: 3rem;
     }
     
-    header h3{
-        font-size: 7rem;
-    }
-
-    .about{
-        grid-template-columns: 1fr;
-    }
-
-    .about-left{  
-    display: flex;
-    text-align: center;
-    flex-direction: column;
-    align-items: center;
-    justify-content:center;
-    }
-
-    .about-right{
-        display: flex;
-        text-align: center;
-        align-items: start;
-        justify-content: center;
-        padding: 0px 200px;
-    }
-
-    .program{
-        padding: 2rem 4rem;
-        grid-template-columns: 1fr 1fr;
-        text-align: center;
-    }
-    
-    
-    .program-info h2{
-        text-transform: uppercase;
-    }
-    
-    
-    .box h3{
-        font-size: 1.3em;
-        text-transform: uppercase;
-    }
-
-    
-    .gallery{
-        grid-template-columns: repeat(auto-fit, minmax(300px, 2fr));
-    }
-
-
-    .counter{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        padding: 100px 20px;
-    }
-
-}
-  
-  @media (max-width: 700px) {
-   
-    header {
-        min-height: 400px;
-        background: url(/media/star.jpg);
-        background-size: cover;
-        background-position: center;
-        padding: 60px 120px;
-    }
-    
-    header h1{
-        font-size: 2rem;
-        color: var(--white);
-    }
-    
-    header h3{
+    .text h3{
         font-size: 6rem;
-        color: var(--white);
     }
 
+    /* Media About */
     .about{
         grid-template-columns: 1fr;
     }
-
-    .about-left{  
-        padding: 0 200px;
-
+    
+    .about-left{
+        display: flex;
+        align-items: center;
     }
-
+    
     .about-right{
-        padding: 0 160px;
-    
+        text-align: center;
     }
 
-    .about-left h2{
-        font-size: 1.4rem;
-    }
-    
-    .about-left h3{
-        font-size: 1.2rem;
-    }
-    
-    .about-right p{
-        font-size: 1.1rem;
-    }
+    /* Program Media*/
 
     .program{
-        grid-template-columns: 1fr;
-        text-align: center;
+    grid-template-columns: 1fr 1fr;
     }
-    
+
     .program-info{
-        text-align: center;
+    padding: 6rem 10rem;
     }
-        
-    .box p{
-        padding: 0 140px;
-    }
-    
-    .feedback{
-        grid-template-columns: 1fr;
-    }
-
-    .showcase{
-        text-align: center;
-        padding: 0;
-    }
-       
-    .showcase-info{
-        padding: 0;
-    }
-
+    /* Gallery Media */
     .gallery-info{
-    padding: 2rem 6rem;
+        padding: 4rem 10rem;
     }
-    
-    .gallery{
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        padding: 20px 80px;
-    }
-    
+
     .counter{
-        grid-template-columns: 1fr;
-        padding: 100px 20px;
+        grid-template-columns: 1fr 1fr;
     }
-  }
+ 
+}
 
 
-  @media (max-width: 500px) {
-   
-    header {
-        min-height: 300px;
-        padding: 60px 120px;
+@media (max-width: 576px) {
+
+    .text h1{
+        font-size: 2rem;
     }
     
-    header h1{
-        font-size: 1.6rem;
-    }
-    
-    header h3{
+    .text h3{
         font-size: 4rem;
     }
 
-    .about{
-        grid-template-columns: 1fr;
+
+    .program{
+    grid-template-columns: 1fr;
+    text-align: center;
     }
 
-    .about-left{  
-        padding: 0 160px;
-
-    }
-
-    .about-right{
-        padding: 0 120px;
-    
-    }
-
-    .about-left h2{
-        font-size: 1.4rem;
-    }
-    
-    .about-left h3{
-        font-size: 1.2rem;
-    }
-    
-    .about-right p{
-        font-size: 1.1rem;
-    }
-    
     .program-info{
-        text-align: center;
-        padding: 10px 140px;
+    padding: 3rem 6rem;
     }
-        
-    .box p{
-        padding: 0 60px;
+    /* Gallery Media */
+
+    .gallery-info{
+        padding: 2rem 6rem;
     }
-    
-    .feedback{
+
+    .counter{
         grid-template-columns: 1fr;
     }
-    
-    .showcase{
-        padding: 20px 120px;
-    }
-        
-    .gallery{
-        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-    
-  }
+ 
+}
